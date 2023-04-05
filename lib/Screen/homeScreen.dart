@@ -11,18 +11,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-       body: SafeArea(
-        child: ListView(
-          primary: true,
-          children: [
-            Padding(
+      body: ListView(
+        
+        children: [
+           Container(
               
-              padding: const EdgeInsets.symmetric(
-                vertical: 40.0,
-              ),
+              margin: const EdgeInsets.symmetric(horizontal: 24, vertical:24 ),
+
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   const CircleAvatar(
                     backgroundImage: AssetImage("images/user.jpg"),
@@ -39,129 +36,114 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   ),
                   const Icon(
-                    Icons.filter_alt_off_outlined,
+                    Icons.settings_input_component,
                     color: Colors.black,
                     size: 24.0,
                   )
                 ]
-              ),
-            ),
-
-          
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32,
-                vertical: 30,
-              ),
-              child: Column(
-                children:[
-                    ClipRRect(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(8.0),
-                        topRight: Radius.circular(8.0),
-                      ),
-                      child: Image.asset(
-                        "images/image_1.png",
-                        width: 300,
-                        height: 150,
-                        fit:BoxFit.fill  
-                      ),
-                    ),
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: const TextSpan(
-                      text: "Retrouver vos objets perdus deviennent plus facile",     
-                      style: TextStyle(color: Colors.black, fontSize: 21, fontWeight: FontWeight.bold,)                           
-                      )     
-                    ),
-                ],
-               
-              ),
-            ),
-
-
-
-            Padding(
               
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32,
-                vertical: 30,
               ),
-              child: Column(
-                
-                children:  [
-                  
-                    ClipRRect(
-                      
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(8.0),
-                        topRight: Radius.circular(8.0),
-                        
-                      ),
-                      
-                      child: Image.asset(
-                        "images/image_2.jpg",
-                        width: 300,
-                        height: 150,
-                        fit:BoxFit.fill  
 
-                      ),
-                      
-                    ),
-                    RichText(
+            ),
+          
+            
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 24 ),
+              height: 180,
+
+              child: Column(
+                children: [
+                  
+                  Image.asset( "images/img_1.png",
+                          width: 200,
+                          height: 150,
+                          fit:BoxFit.fill  ),
+
+                  RichText(
+                        textAlign: TextAlign.center,
+                        text: const TextSpan(
+                        text: "Retrouver vos objets perdu deviennent plus facile",  
+                        style: TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold, )                              
+                        )
+                  ), 
+                   
+              
+                ],
+              
+              ),
+
+            ),
+
+          Container(
+            
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: const Color.fromARGB(255,212,206,1),
+           
+          ),
+            margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 15 ),
+    
+            height: 180,
+            
+            child: Column(
+              children: [
+                
+                Image.asset( "images/img_2.png",
+                        width: 200,
+                        height: 150,
+                        fit:BoxFit.fill  ),
+                RichText(
+              
                       textAlign: TextAlign.center,
                       text: const TextSpan(
                       text: "J'ai Perdu / J'ai retrouvé",  
-                      style: TextStyle(color: Colors.black, fontSize: 21, fontWeight: FontWeight.bold,)                              
-                      )     
-                    ),
-                ],
-               
-              ),
-            ),
-
-
-            Padding(
-              
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32,
-                vertical: 30,
-              ),
-              child: Column(
+                      style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold,)                              
+                      )
+                )   
                 
-                children:  [
-                  
-                    ClipRRect(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(8.0),
-                        topRight: Radius.circular(8.0),
-                      ),
-                      child: Image.asset(
-                        "images/image_3.jpg",
-                        width: 300,
-                        height: 150,
-                        fit:BoxFit.fill  
+              ],
+            
+          ),
 
-                      ),
-                    ),
-                    RichText(
+          ),
+
+          Container(
+            
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+           color: const Color.fromARGB(222,247,229,1),
+           
+          ),
+            margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 15 ),
+    
+            height: 180,
+            
+            child: Column(
+              children: [
+                
+                Image.asset( "images/img_3.png",
+                        width: 200,
+                        height: 150,
+                        fit:BoxFit.fill  ),
+                RichText(
                       textAlign: TextAlign.center,
                       text: const TextSpan(
-                      text: "Objets trouvés",         
-                      style: TextStyle(color: Colors.black, fontSize: 21, fontWeight: FontWeight.bold,)                       
-                      )     
-                    ),
-                ],
-               
-              ),
-            ),
+                      text: "Objet trouvé",  
+                      style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold,)                              
+                      )
+                )   
+                
+              ],
+            
+          ),
 
-
-          ],
-         
-        )
+          ),
         
-       )
+          
+        ],
+      )
+   
+       
     );
   }
                  
