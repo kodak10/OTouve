@@ -28,10 +28,10 @@ class _FoundScreenState extends State<FoundScreen> {
                 ),
                 RichText(
                   text: const TextSpan(
-                      text: "O'TROUVE",
+                      text: "Objets trouvés",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 24,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       )),
                 ),
