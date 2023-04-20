@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:otrouve/Screen/homeScreen.dart';
+import 'package:otrouve/Screen/landing.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void navigationPage() {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => const HomeScreen(),
+        builder: (context) => const LandinPage(),
       ),
     );
   }
