@@ -20,7 +20,7 @@ class _FoundScreenState extends State<FoundScreen> {
           primary: true,
           children: [
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+              margin: const EdgeInsets.all(20),
               child:
                   Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
                 const CircleAvatar(
@@ -42,6 +42,69 @@ class _FoundScreenState extends State<FoundScreen> {
                 )
               ]),
             ),
+
+            //recherche
+              Container(
+                  margin: const EdgeInsets.all(20),                        
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                            // Zone de texte
+                    const Expanded(
+                      
+                      child: TextField(
+                        decoration: InputDecoration(    
+                          
+                          hintText: 'Rechercher...',
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                    ),
+                            // Bouton de recherche
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.greenAccent.shade700,
+                      ),
+                      child: const Icon(Icons.search, color: Colors.greenAccent,),
+                      ),
+                  ],
+                  ),
+              ),
+            //filtre
+            Container(
+            margin: const EdgeInsets.all(20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+
+                Text('Filtre : ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                // Boutons de filtre
+                ElevatedButton(
+                  
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.greenAccent.shade700,
+                  ),
+                  child: const Text('Tout',),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+
+                  child: const Text('CNI'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Passport'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Permis'),
+                ),
+                
+              ],
+            ),
+          ),
             
             const PageViewFoundOjectList(),
             const SizedBox(
