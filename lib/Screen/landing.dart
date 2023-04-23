@@ -59,7 +59,7 @@ class _LandinPageState extends State<LandinPage> {
                             padding: EdgeInsets.only(top: 16),
                             alignment: Alignment.topRight,
                             child: Image(
-                              image: AssetImage(""),
+                              image: AssetImage("images/landing_1.jpg"),
                             ),
                           ),
                           height: size.height * 0.5,
@@ -84,7 +84,7 @@ class _LandinPageState extends State<LandinPage> {
                         Container(
                           height: context.height() * 0.5,
                           child: Image(
-                            image: AssetImage(""),
+                            image: AssetImage("images/landing_2.jpg"),
                           ),
                         ),
                         Positioned(
@@ -107,7 +107,7 @@ class _LandinPageState extends State<LandinPage> {
                         Container(
                           height: context.height() * 0.5,
                           child: Image(
-                            image: AssetImage(""),
+                            image: AssetImage("images/landing_3.jpg"),
                           ),
                         ),
                         Positioned(

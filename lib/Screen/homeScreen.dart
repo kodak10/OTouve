@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:otrouve/Screen/foundScreen.dart';
 
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -38,77 +39,108 @@ class _HomeScreenState extends State<HomeScreen> {
           ]),
         ),
         Container(
-          margin: const EdgeInsets.symmetric(horizontal: 24),
-          height: 180,
           child: Column(
             children: [
-              Image.asset("images/img_1.png",
-                  width: 200, height: 150, fit: BoxFit.fill),
-              RichText(
-                  textAlign: TextAlign.center,
-                  text: const TextSpan(
-                      text: "Retrouver vos objets perdu deviennent plus facile",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ))),
-            ],
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: const Color.fromARGB(255, 212, 206, 1),
-          ),
-          margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 15),
-          height: 180,
-          child: Column(
-            children: [
-              Image.asset("images/img_2.png",
-                  width: 200, height: 150, fit: BoxFit.fill),
-              RichText(
-                  textAlign: TextAlign.center,
-                  text: const TextSpan(
-                      text: "J'ai Perdu / J'ai retrouvé",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )))
-            ],
-          ),
-        ),
-        ElevatedButton(
+              ElevatedButton(
+                onPressed: () {
+                  ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green, // Couleur de fond
+                    foregroundColor: Colors.white, // Couleur du texte
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10), // Padding
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20), // Coins arrondis
+                    ),
+                  );
 
-          onPressed: () {
-            
-            BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: const Color.fromARGB(255, 212, 206, 1),
-            );
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const FoundScreen()));
-          },
-          child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 15),
-
-            height: 180,
-            child: Column(
-              children: [
-                Image.asset("images/img_3.png",
-                    width: 200, height: 150, fit: BoxFit.fill),
-                RichText(
-                    textAlign: TextAlign.center,
-                    text: const TextSpan(
-                        text: "Objet trouvé",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        )))
-              ],
-            ),
+                  BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  );
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => const FoundScreen()));
+                },
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 24),
+                  height: 180,
+                  child: Column(
+                    children: [
+                      Image.asset("images/img_1.png",
+                          width: 200, height: 150, fit: BoxFit.fill),
+                      RichText(
+                          textAlign: TextAlign.center,
+                          text: const TextSpan(
+                              text: "Objet trouvé",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              )))
+                    ],
+                  ),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 212, 206, 1),
+                  );
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => const FoundScreen()));
+                },
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 24),
+                  height: 180,
+                  child: Column(
+                    children: [
+                      Image.asset("images/img_2.png",
+                          width: 200, height: 150, fit: BoxFit.fill),
+                      RichText(
+                          textAlign: TextAlign.center,
+                          text: const TextSpan(
+                              text: "Objet trouvé",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              )))
+                    ],
+                  ),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 212, 206, 1),
+                  );
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FoundScreen()));
+                },
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 24),
+                  height: 180,
+                  child: Column(
+                    children: [
+                      Image.asset("images/img_3.png",
+                          width: 200, height: 150, fit: BoxFit.fill),
+                      RichText(
+                          textAlign: TextAlign.center,
+                          text: const TextSpan(
+                              text: "Objet trouvé",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              )))
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ],

@@ -14,7 +14,7 @@ class _FoundScreenState extends State<FoundScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFe7eefb),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
         child: ListView(
           primary: true,
@@ -45,15 +45,21 @@ class _FoundScreenState extends State<FoundScreen> {
 
             //recherche
               Container(
+                height: 40,
                   margin: const EdgeInsets.all(20),                        
                   child: Row(
+                    
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                             // Zone de texte
                     const Expanded(
                       
+                      
                       child: TextField(
+                        
+                        
                         decoration: InputDecoration(    
+                          
                           
                           hintText: 'Rechercher...',
                           border: OutlineInputBorder(),
@@ -62,11 +68,14 @@ class _FoundScreenState extends State<FoundScreen> {
                     ),
                             // Bouton de recherche
                     ElevatedButton(
+                      
+                      
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
+                        
                         backgroundColor: Colors.greenAccent.shade700,
                       ),
-                      child: const Icon(Icons.search, color: Colors.greenAccent,),
+                      child: const Icon(Icons.search, color: Color.fromARGB(255, 255, 255, 255), size: 25,),
                       ),
                   ],
                   ),
@@ -78,7 +87,7 @@ class _FoundScreenState extends State<FoundScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
 
-                Text('Filtre : ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                const Text('Filtre : ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
                 // Boutons de filtre
                 ElevatedButton(
                   
@@ -90,15 +99,23 @@ class _FoundScreenState extends State<FoundScreen> {
                 ),
                 ElevatedButton(
                   onPressed: () {},
-
+                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey,
+                  ),
                   child: const Text('CNI'),
                 ),
                 ElevatedButton(
                   onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey,
+                  ),
                   child: const Text('Passport'),
                 ),
                 ElevatedButton(
                   onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey,
+                  ),
                   child: const Text('Permis'),
                 ),
                 
