@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:otrouve/Component/previewlist_found.dart';
+import 'package:otrouve/Screen/homeScreen.dart';
 
 
 class FoundScreen extends StatefulWidget {
@@ -22,24 +23,42 @@ class _FoundScreenState extends State<FoundScreen> {
             Container(
               margin: const EdgeInsets.all(20),
               child:
-                  Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                const CircleAvatar(
-                  backgroundImage: AssetImage("images/user.jpg"),
-                ),
-                RichText(
-                  text: const TextSpan(
-                      text: "Objets trouvés",
-                      style: TextStyle(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const CircleAvatar(
+                        backgroundImage: AssetImage("images/user.jpg"),
+                      ),
+                      RichText(
+                        text: const TextSpan(
+                            text: "Objets trouvés",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                                padding:EdgeInsets.all(20),
+                                elevation: 0, //content padding inside button
+                            ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomeScreen()
+                            )
+                          );
+                        },
+                        child: Icon(
+                        Icons.arrow_back_ios_new,
                         color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      )),
-                ),
-                const Icon(
-                  Icons.arrow_back_ios_new,
-                  color: Colors.black,
-                  size: 24.0,
-                )
+                        size: 24.0,
+                      )
+                      )
+                
               ]),
             ),
 
@@ -73,7 +92,7 @@ class _FoundScreenState extends State<FoundScreen> {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         
-                        backgroundColor: Colors.greenAccent.shade700,
+                        backgroundColor: Color.fromARGB(255, 7, 107, 37),
                       ),
                       child: const Icon(Icons.search, color: Color.fromARGB(255, 255, 255, 255), size: 25,),
                       ),

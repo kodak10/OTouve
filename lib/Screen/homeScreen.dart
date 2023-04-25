@@ -43,21 +43,10 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(
-                          255, 255, 255, 255),
-                           //background color of button
-                      //side: BorderSide(width:3, color:Colors.brown), //border width and color
-                      // elevation: 3, //elevation of button
-                      // shape: RoundedRectangleBorder( //to set border radius to button
-                      //     borderRadius: BorderRadius.circular(30)
-                      // ),
-
-                      padding:
-                          EdgeInsets.all(20) //content padding inside button
+                          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                          padding:EdgeInsets.all(20) //content padding inside button
                       ),
                 onPressed: () {
-                 
-                  
 
                   BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -67,11 +56,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   //     MaterialPageRoute(builder: (context) => const FoundScreen()));
                 },
                 child: Container(
-                  height: 230,
+                  height: 190,
+                  width: double.infinity,
                   child: Column(
                     children: [
                       Image.asset("images/img_1.png",
-                          width: 200, height: 150, fit: BoxFit.fill),
+                          width: 200, height: 130, fit: BoxFit.fill),
+                          SizedBox(
+                            height: 20,
+                          ),
                       RichText(
                           textAlign: TextAlign.center,
                           text: const TextSpan(
@@ -99,16 +92,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   //     MaterialPageRoute(builder: (context) => const FoundScreen()));
                 },
                 child: Container(
-                  height: 230,
+                   width: double.infinity,
+                  height: 180,
                   child: Column(
                     children: [
                       Image.asset("images/img_2.png",
-                          width: 200, height: 150, fit: BoxFit.fill),
+                          width: 200, height: 130, fit: BoxFit.fill),
+                          SizedBox(
+                            height: 20,
+                          ),
                       RichText(
                           textAlign: TextAlign.center,
                           text: const TextSpan(
                               text:
-                                  "Retrouver vos objets perdus deviens plus facile",
+                                  "J'ai perdu / J'ai retrouvé",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -142,16 +139,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           builder: (context) => const FoundScreen()));
                 },
                 child: Container(
-                  height: 230,
+                   width: double.infinity,
+                  height: 180,
                   child: Column(
                     children: [
                       Image.asset("images/img_3.png",
-                          width: 200, height: 150, fit: BoxFit.fill),
+                          width: 200, height: 130, fit: BoxFit.fill),
+                          SizedBox(
+                            height: 20,
+                          ),
                       RichText(
                           textAlign: TextAlign.center,
                           text: const TextSpan(
                               text:
-                                  "Retrouver vos objets perdus deviens plus facile",
+                                  "Objet trouvés",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,

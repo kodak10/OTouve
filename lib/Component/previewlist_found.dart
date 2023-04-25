@@ -102,7 +102,7 @@ class _PageViewFoundOjectListState extends State<PageViewFoundOjectList> {
                                         style: const TextStyle(
                                           fontSize: 21,
                                           fontWeight: FontWeight.w700,
-                                          color: Color.fromARGB(255, 0, 0, 0),
+                                          color: Color.fromARGB(255, 52, 52, 53),
                                         ),
                                       )
                                   ]),
@@ -132,7 +132,11 @@ class _PageViewFoundOjectListState extends State<PageViewFoundOjectList> {
                                       Expanded(
                                         child: Row(
                                           children: [
-                                            Text('perdu le:  '),
+                                            Text('perdu le:  ', style: const TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w500,
+                                              color: Color.fromARGB(255, 52, 52, 53),
+                                            ),),
                                            
                                             Text(
                                             founds[index].foundDate,
@@ -141,7 +145,7 @@ class _PageViewFoundOjectListState extends State<PageViewFoundOjectList> {
                                             style: const TextStyle(
                                               fontSize: 14,
                                               fontWeight: FontWeight.w500,
-                                              color: Color(0xFF0E0E2D),
+                                              color: Color.fromARGB(255, 52, 52, 53),
                                             ),
                                           ),
 

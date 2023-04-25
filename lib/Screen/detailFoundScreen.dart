@@ -39,30 +39,32 @@ class _DetailScreenState extends State<DetailScreen> {
       body: ListView(
         children: [
           Container(
+            
+            alignment: Alignment.topLeft,
             margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
             child: ElevatedButton(
-                onPressed: () {
-                  
-                  ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(
-                          255, 88, 87, 87), //background color of button
-                      //side: BorderSide(width:3, color:Colors.brown), //border width and color
-                      // elevation: 3, //elevation of button
-                      // shape: RoundedRectangleBorder( //to set border radius to button
-                      //     borderRadius: BorderRadius.circular(30)
-                      // ),
+                      onPressed: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const FoundScreen()
+                          )
+                          );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 255, 255, 255), //background color of button
+                        //side: BorderSide(width:3, color:Colors.brown), //border width and color
+                        // elevation: 3, //elevation of button
+                        // shape: RoundedRectangleBorder( //to set border radius to button
+                        //     borderRadius: BorderRadius.circular(30)
+                        // ),
 
-                      //content padding inside button
-                      );
-
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const FoundScreen()));
-                },
+                        //content padding inside button
+                      ),
+                
                 child: const Icon(
                   Icons.arrow_back_ios_new,
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   size: 24.0,
                 )
               ),
@@ -76,6 +78,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     height: 200,
                     padding: const EdgeInsets.all(25),
                     decoration: BoxDecoration(
+                      
                         borderRadius: BorderRadius.circular(14),
                         color: Colors.transparent),
                     child: Row(
@@ -183,29 +186,42 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
           ),
           Container(
+            width: double.infinity,
             margin: const EdgeInsets.all(20),
             child: Row(
               children: [
                 Container(
-                  width: 100,
-                  height: 60,
-                  color: Colors.greenAccent.shade700,
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.0), 
+                    color: Colors.greenAccent.shade700,
+                  ),
+                  
+                 //color: Colors.greenAccent.shade700,
                   child: const Icon(Icons.info, color: Colors.white, size: 25),
                 ),
-                RichText(
-                    maxLines: 3,
-                    textAlign: TextAlign.center,
-                    text: const TextSpan(
-                      text:
-                          "Unde tempora cupiditate placeat fuga veritatis nihil aliquam ipsam.",
-                      style: TextStyle(
-                        height: 5,
-                        backgroundColor: Colors.grey,
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                Container(
+                  height: 70,
+                  //width: double.infinity,
+                  color: Colors.grey,
+                  //padding: EdgeInsets.all(5),
+                  child: Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                     children: const [
+                      Text(
+                        'Flutter est un framework de développement d\'applications mobiles open source créé par Google. '
+                        'Il permet de créer des applications pour iOS, Android et le web à partir d\'un code unique en '
+                        'utilisant le langage de programmation Dart. Flutter est connu pour sa rapidité d\'exécution, '
+                        'sa facilité de développement et sa riche bibliothèque de widgets personnalisables.',
+                        style: TextStyle(fontSize: 14, color: Color.fromARGB(190, 0, 0, 0),),
                       ),
-                    ))
+                      
+                     ],
+                  )
+                
+                ),
+               
               ],
             ),
           ),
@@ -217,9 +233,9 @@ class _DetailScreenState extends State<DetailScreen> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text('Trouvé par'),
-                    Text('Ail Karim'),
-                    Text('30 point'),
+                    Text('Trouvé par', style: TextStyle(color: Colors.grey, fontSize: 12),),
+                    Text('Ail Karim', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.bold),),  
+                    Text('30 point', style: TextStyle(color: Color.fromARGB(255, 245, 98, 0), fontSize: 12),),
                   ],
                 ),
                 Row(
