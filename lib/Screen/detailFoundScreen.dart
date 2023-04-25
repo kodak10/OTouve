@@ -42,7 +42,7 @@ class _DetailScreenState extends State<DetailScreen> {
             margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
             child: ElevatedButton(
                 onPressed: () {
-                  style:
+                  
                   ElevatedButton.styleFrom(
                       backgroundColor: Color.fromARGB(
                           255, 88, 87, 87), //background color of button
@@ -52,8 +52,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       //     borderRadius: BorderRadius.circular(30)
                       // ),
 
-                      padding:
-                          EdgeInsets.all(20) //content padding inside button
+                      //content padding inside button
                       );
 
                   Navigator.push(
@@ -65,7 +64,8 @@ class _DetailScreenState extends State<DetailScreen> {
                   Icons.arrow_back_ios_new,
                   color: Color.fromARGB(255, 255, 255, 255),
                   size: 24.0,
-                )),
+                )
+              ),
           ),
           Container(
             padding: const EdgeInsets.all(16.0),

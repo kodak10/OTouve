@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:otrouve/Screen/foundScreen.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -39,19 +38,26 @@ class _HomeScreenState extends State<HomeScreen> {
           ]),
         ),
         Container(
+          margin: const EdgeInsets.all(25.0),
           child: Column(
             children: [
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(
+                          255, 255, 255, 255),
+                           //background color of button
+                      //side: BorderSide(width:3, color:Colors.brown), //border width and color
+                      // elevation: 3, //elevation of button
+                      // shape: RoundedRectangleBorder( //to set border radius to button
+                      //     borderRadius: BorderRadius.circular(30)
+                      // ),
+
+                      padding:
+                          EdgeInsets.all(20) //content padding inside button
+                      ),
                 onPressed: () {
-                  ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green, // Couleur de fond
-                    foregroundColor: Colors.white, // Couleur du texte
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10), // Padding
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20), // Coins arrondis
-                    ),
-                  );
+                 
+                  
 
                   BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -61,8 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   //     MaterialPageRoute(builder: (context) => const FoundScreen()));
                 },
                 child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 24),
-                  height: 180,
+                  height: 230,
                   child: Column(
                     children: [
                       Image.asset("images/img_1.png",
@@ -70,7 +75,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       RichText(
                           textAlign: TextAlign.center,
                           text: const TextSpan(
-                              text: "Objet trouvé",
+                              text:
+                                  "Retrouver vos objets perdus deviens plus facile",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -80,18 +86,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
               ElevatedButton(
                 onPressed: () {
                   BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 212, 206, 1),
+                    color: Color.fromARGB(255, 201, 18, 185),
                   );
                   // Navigator.push(context,
                   //     MaterialPageRoute(builder: (context) => const FoundScreen()));
                 },
                 child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 24),
-                  height: 180,
+                  height: 230,
                   child: Column(
                     children: [
                       Image.asset("images/img_2.png",
@@ -99,7 +107,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       RichText(
                           textAlign: TextAlign.center,
                           text: const TextSpan(
-                              text: "Objet trouvé",
+                              text:
+                                  "Retrouver vos objets perdus deviens plus facile",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -109,20 +118,31 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 18, 95, 48), //background color of button
+                      //side: BorderSide(width:3, color:Colors.brown), //border width and color
+                      // elevation: 3, //elevation of button
+                      // shape: RoundedRectangleBorder( //to set border radius to button
+                      //     borderRadius: BorderRadius.circular(30)
+                      // ),
+
+                      padding:
+                          EdgeInsets.all(20) //content padding inside button
+                      ),
                 onPressed: () {
-                  BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 212, 206, 1),
-                  );
+                  
+
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const FoundScreen()));
                 },
                 child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 24),
-                  height: 180,
+                  height: 230,
                   child: Column(
                     children: [
                       Image.asset("images/img_3.png",
@@ -130,7 +150,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       RichText(
                           textAlign: TextAlign.center,
                           text: const TextSpan(
-                              text: "Objet trouvé",
+                              text:
+                                  "Retrouver vos objets perdus deviens plus facile",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,

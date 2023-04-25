@@ -17,51 +17,39 @@ class _PageViewFoundOjectListState extends State<PageViewFoundOjectList> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      
-      padding: const EdgeInsets.symmetric(horizontal: 0.0),
+    return Container(
+      margin: const EdgeInsets.all(20),
+      // padding: const EdgeInsets.all(10),
       child: ListView.builder(
         physics: const NeverScrollableScrollPhysics(),
         itemCount: founds.length,
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return ElevatedButton(
-           style: ElevatedButton.styleFrom(
-              
-                   backgroundColor: const Color.fromARGB(255, 255, 255, 255), //background color of button
-                  //side: BorderSide(width:3, color:Colors.brown), //border width and color
-                 // elevation: 3, //elevation of button
-                  // shape: RoundedRectangleBorder( //to set border radius to button
-                  //     borderRadius: BorderRadius.circular(30)
-                  // ),
-                  
-                  padding: EdgeInsets.all(20) //content padding inside button
-                ),
+              style: ElevatedButton.styleFrom(
+                
+                backgroundColor: const Color.fromARGB(255, 255, 255, 255), //background color of button      
+                // elevation: 0,
+              ),
             
-             onPressed: () {
-              
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const DetailScreen()
-                      )
-                  );
-                },
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DetailScreen()
+                  )
+                );
+              },
               child: Container(
-                height: 300,
-                padding: const EdgeInsets.all(16),
+                width: double.infinity,
+                margin: EdgeInsets.symmetric(vertical: 30),
+                height: 250,
                 decoration: BoxDecoration(
-                 boxShadow: [
-                        BoxShadow(
-                          color: Color.fromARGB(57, 158, 158, 158).withOpacity(0.5),
-                          spreadRadius: 5,
-                          
-                          offset: Offset(0, 3), // changes position of shadow
-                        ),
-                      ],
                   
+                    color: Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(14),
-                    color: Colors.transparent),
+                ),
+
                 child: Row(
                   // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -69,29 +57,28 @@ class _PageViewFoundOjectListState extends State<PageViewFoundOjectList> {
                       child: Column(
                         children: [
                           Container(
-                            height: 180,
+                           width: double.maxFinite,
+                            height: 150,
+                            child: Image.asset(
+                              'images/found/${founds[index].foundImage}',
+                              fit: BoxFit.cover,
+                            ),
                             decoration: BoxDecoration(
-                              
-                              borderRadius: BorderRadius.circular(12),
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage(
-                                  'images/found/${founds[index].foundImage}',
-                                ),
-                              ),
+                              color: Colors.black,
                             ),
                           ),
-                          const SizedBox(
-                            width: 18.56,
-                          ),
+                          
                           Expanded(
                             child: Column(
+                              
                               children: [
                                 Container(
-                                  margin:
-                                      const EdgeInsets.symmetric(vertical: 3),
-                                  child: Row(children: [
-                                    Text(
+                                 // margin: EdgeInsets.all(5),
+                                  child: Row(
+                                    children: [
+                                    Container(
+                                      margin: EdgeInsets.only(left: 10.0, top: 10,),
+                                      child:  Text(
                                       founds[index].foundID,
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 1,
@@ -100,50 +87,66 @@ class _PageViewFoundOjectListState extends State<PageViewFoundOjectList> {
                                         fontWeight: FontWeight.w500,
                                         color: Color.fromARGB(255, 41, 41, 41),
                                       ),
+                                    ),
                                     )
                                   ]),
                                 ),
                                 Container(
-                                  child: Row(children: [
-                                    Text(
-                                      founds[index].foundName,
-                                      overflow: TextOverflow.ellipsis,
-                                      maxLines: 1,
-                                      style: const TextStyle(
-                                        fontSize: 21,
-                                        fontWeight: FontWeight.w700,
-                                        color: Color.fromARGB(255, 0, 0, 0),
-                                      ),
-                                    )
+                                  margin: EdgeInsets.only(left: 10.0),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        founds[index].foundName,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        style: const TextStyle(
+                                          fontSize: 21,
+                                          fontWeight: FontWeight.w700,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      )
                                   ]),
                                 ),
                                 Container(
-                                  margin:
-                                      const EdgeInsets.symmetric(vertical: 3),
-                                  child: Row(children: [
-                                    Text(
-                                      founds[index].foundType,
-                                      overflow: TextOverflow.ellipsis,
-                                      maxLines: 1,
-                                      style: const TextStyle(
-                                        backgroundColor:
-                                            Color.fromARGB(19, 109, 9, 34),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                        color:
-                                            Color.fromARGB(255, 248, 248, 248),
+                                  margin: EdgeInsets.only(left: 10.0),
+
+                                  child: Row(
+                                    children: [
+                                      
+                                      Text(
+                                        founds[index].foundType,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        style: const TextStyle(
+                                          
+                                          
+                                          backgroundColor:
+                                              Color.fromARGB(255, 109, 9, 34),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w500,
+                                          color:
+                                              Color.fromARGB(255, 248, 248, 248),
+                                        ),
                                       ),
-                                    ),
-                                    Text(
-                                      founds[index].foundDate,
-                                      overflow: TextOverflow.ellipsis,
-                                      maxLines: 1,
-                                      style: const TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xFF0E0E2D),
-                                      ),
-                                    ),
+                                      SizedBox(width: 10,),
+                                      Expanded(
+                                        child: Row(
+                                          children: [
+                                            Text('perdu le:  '),
+                                           
+                                            Text(
+                                            founds[index].foundDate,
+                                            overflow: TextOverflow.ellipsis,
+                                            maxLines: 1,
+                                            style: const TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w500,
+                                              color: Color(0xFF0E0E2D),
+                                            ),
+                                          ),
+
+                                      ],))
+                                      
                                   ]),
                                 ),
                               ],
@@ -155,123 +158,7 @@ class _PageViewFoundOjectListState extends State<PageViewFoundOjectList> {
                   ],
                 ),
               ));
-          // return Container(
-
-          //   height: 401,
-          //   padding: const EdgeInsets.all(16),
-          //   decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(14),
-          //       color: Colors.transparent),
-
-          //   child: Row(
-          //     // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //     children: [
-          //       Expanded(
-
-          //         child: Column(
-
-          //           children: [
-
-          //             Container(
-
-          //               height: 180,
-          //               decoration: BoxDecoration(
-          //                 borderRadius: BorderRadius.circular(12),
-          //                 image: DecorationImage(
-          //                   fit: BoxFit.cover,
-          //                   image: AssetImage(
-          //                     'images/found/${founds[index].foundImage}',
-          //                   ),
-          //                 ),
-          //               ),
-          //             ),
-          //             const SizedBox(
-          //               width: 18.56,
-          //             ),
-          //             Expanded(
-          //               child: Column(
-
-          //                 children: [
-          //                   Container(
-          //                     margin: const EdgeInsets.symmetric(vertical: 3),
-          //                     child:
-          //                         Row(
-          //                          children: [
-          //                             Text(
-          //                               founds[index].foundID,
-          //                               overflow: TextOverflow.ellipsis,
-          //                               maxLines: 1,
-          //                               style: const TextStyle(
-          //                                 fontSize: 14,
-          //                                 fontWeight: FontWeight.w500,
-          //                                 color: Color.fromARGB(255, 41, 41, 41),
-          //                               ),
-          //                             )
-
-          //                         ]
-          //                       ),
-
-          //                   ),
-          //                    Container(
-          //                     child:
-          //                         Row(
-          //                          children: [
-          //                             Text(
-          //                               founds[index].foundName,
-          //                               overflow: TextOverflow.ellipsis,
-          //                               maxLines: 1,
-          //                               style: const TextStyle(
-          //                                 fontSize: 21,
-          //                                 fontWeight: FontWeight.w700,
-          //                                 color: Color.fromARGB(255, 0, 0, 0),
-          //                               ),
-          //                             )
-
-          //                         ]
-          //                       ),
-
-          //                   ),
-          //                    Container(
-          //                     margin: const EdgeInsets.symmetric(vertical: 3),
-          //                     child:
-          //                         Row(
-          //                           children: [
-          //                             Text(
-          //                               founds[index].foundType,
-          //                               overflow: TextOverflow.ellipsis,
-          //                               maxLines: 1,
-          //                               style: const TextStyle(
-          //                                 backgroundColor: Color.fromARGB(19, 109, 9, 34),
-          //                                 fontSize: 14,
-          //                                 fontWeight: FontWeight.w500,
-          //                                 color: Color.fromARGB(255, 248, 248, 248),
-          //                               ),
-          //                             ),
-          //                             Text(
-          //                               founds[index].foundDate,
-          //                               overflow: TextOverflow.ellipsis,
-          //                               maxLines: 1,
-          //                               style: const TextStyle(
-          //                                 fontSize: 14,
-          //                                 fontWeight: FontWeight.w500,
-          //                                 color: Color(0xFF0E0E2D),
-          //                               ),
-          //                             ),
-
-          //                         ]
-          //                       ),
-
-          //                   ),
-
-          //                 ],
-          //               ),
-          //             )
-          //           ],
-          //         ),
-          //       ),
-          //     ],
-          //   ),
-          // );
+         
         },
       ),
     );
