@@ -27,7 +27,7 @@ class _FoundScreenState extends State<FoundScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       const CircleAvatar(
-                        backgroundImage: AssetImage("images/user.jpg"),
+                        backgroundImage: AssetImage("assets/images/user.jpg"),
                       ),
                       RichText(
                         text: const TextSpan(

@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             const CircleAvatar(
-              backgroundImage: AssetImage("images/user.jpg"),
+              backgroundImage: AssetImage("assets/images/user.jpg"),
             ),
             RichText(
               text: const TextSpan(
@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: double.infinity,
                   child: Column(
                     children: [
-                      Image.asset("images/img_1.png",
+                      Image.asset("assets/images/img_1.png",
                           width: 200, height: 130, fit: BoxFit.fill),
                           SizedBox(
                             height: 20,
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 180,
                   child: Column(
                     children: [
-                      Image.asset("images/img_2.png",
+                      Image.asset("assets/images/img_2.png",
                           width: 200, height: 130, fit: BoxFit.fill),
                           SizedBox(
                             height: 20,
@@ -143,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 180,
                   child: Column(
                     children: [
-                      Image.asset("images/img_3.png",
+                      Image.asset("assets/images/img_3.png",
                           width: 200, height: 130, fit: BoxFit.fill),
                           SizedBox(
                             height: 20,

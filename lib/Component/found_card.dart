@@ -38,7 +38,7 @@ class FoundCard extends StatelessWidget {
         ],
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage('images/found/${found!.foundImage}'),
+          image: AssetImage('assets/images/found/${found!.foundImage}'),
         ),
       ),
       child: Stack(
